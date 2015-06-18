@@ -1,0 +1,3 @@
+
+WebFontConfig.active = ->
+    new State

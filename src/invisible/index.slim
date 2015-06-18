@@ -1,0 +1,124 @@
+doctype html
+meta charset='utf-8'
+title インビジゴースト - 見えざる敵の居所を探り、迎え撃て！
+meta http-equiv='x-ua-compatible' content='ie=edge'
+meta name='author' content='hakomo'
+meta name='viewport' content='width=device-width, initial-scale=1'
+meta name='twitter:card' content='photo'
+meta name='twitter:site' content='@hakomof'
+meta name='twitter:image' content='http://hakomo.github.io/images/invisible.png'
+link rel='stylesheet' href='styles/style.css'
+
+div style='font-family: Gennokaku'
+article
+    header: a href='../' てくてくぺたぺた - つくったアプリを公開しています
+    h1 インビジゴースト
+    p 見えざる敵の居所を探り、迎え撃て！ PC ブラウザゲームです。
+    p
+        | Firefox と Google Chrome で動作確認をしています。 Internet Explorer では効果音がうまく再生されません。
+        br
+        a target='_blank' href='https://docs.google.com/forms/d/1y261eyYnYuB5LwlV9NHfPYD_DaU48GlPGwQdp_iWnWQ/viewform?entry.1558357097=%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88&entry.187745740&entry.1950332360' バグの報告・要望
+    p
+        | ゴーストは姿が見えない。しかし、ゴーストゴーグルをかければ範囲に潜むゴーストの
+        span.bold<> 霊力の和と霊力の重心
+        | がわかる。ゴーグルと霊撃を駆使し、居所を推測・絞りこみながら撃退せよ！
+    p: img src='images/a.png' alt='a'
+    h2 説明
+    table
+        caption 操作
+        tr <td>↑ ↓ ← → キー</td><td>移動</td>
+        tr <td>Z キー</td><td>決定 / 攻撃</td>
+        tr <td>X キー</td><td>キャンセル / ターンを進める</td>
+    h4 霊力の和と霊力の重心
+    p 左画像のように見えるとき、白線で囲まれた横 4 マスに潜むゴーストの居所はわからないが、霊力の和は 90 で、霊力の重心は 90 と表示されている位置にあるということです。
+    p では、実際にゴーストがどこに潜んでいるのかというと、右画像のような 3 通りが考えられます（それら以外の可能性もあります）。
+    p: img src='images/b.png' alt='b'
+    h4 目的
+    p ターンを進めるごとに前進してくるゴーストを倒しながら夜明けを迎えてください。どのゴーストも HP は 2 で、倒せなかったゴーストからは霊力分のダメージをくらいます。あとは色々試してみてください。
+    h2 ゲーム
+    p 下にスクロールするとあります。それではお楽しみください。
+    #game
+        a#tweet style='display: none' target='_blank' ツイートする（マウスクリック）
+    h2 更新履歴
+    ul.change-log
+        li
+            | v1.0 2015/06/18
+            ul.small
+                li 公開
+    h2 謝辞
+    p 使わせていただいた素材などです、ありがとうございます。
+    p
+        | 言語
+        a< target='_blank' href='http://coffeescript.org/' CoffeeScript
+        | <br>ゲームフレームワーク
+        a< target='_blank' href='http://phaser.io/' Phaser
+        | <br>フォント
+        a< target='_blank' href='https://github.com/adobe-fonts/source-han-sans/' 源の角
+        | <br>効果音
+        a<> target='_blank' href='http://osabisi.sakura.ne.jp/m2/' ザ・マッチメイカァズ
+        | さま
+        | <br>効果音
+        a<> target='_blank' href='http://www.tam-music.com/' TAM Music Factory
+        | さま
+        | <br>キャラチップ画像
+        a<> target='_blank' href='http://usui.moo.jp/frame2.html' 臼井の会
+        | さま
+        | <br>背景画像
+        a<> target='_blank' href='http://www.photo-ac.com/' 写真AC
+        | さま
+    footer
+        .social
+            .twitter
+            .facebook
+            | 気に入りましたら励みになるので応援してください！
+        | (C) 2015
+        a href='https://twitter.com/hakomof/' target='_blank' @hakomof
+        a href='../' てくてくぺたぺた - つくったアプリを公開しています
+
+script src='/scripts/vender/jquery-2.1.1.min.js'
+script src='/scripts/vender/jquery.socialbutton-1.9.1.min.js'
+script src='/scripts/vender/phaser.2.2.2.min.js'
+script src='/scripts/lib/gennokaku.js'
+
+/! build:js scripts/script.js
+script src='scripts/Color.js'
+script src='scripts/Effect.js'
+script src='scripts/Hp.js'
+script src='scripts/Keys.js'
+script src='scripts/Limited.js'
+script src='scripts/Option.js'
+script src='scripts/Result.js'
+script src='scripts/Root.js'
+script src='scripts/Selection.js'
+script src='scripts/Skill.js'
+script src='scripts/Skills.js'
+script src='scripts/Square.js'
+script src='scripts/Squares.js'
+script src='scripts/State.js'
+script src='scripts/Timer.js'
+script src='scripts/Tips.js'
+script src='scripts/Title.js'
+script src='scripts/Turn.js'
+
+script src='scripts/main.js'
+/! endbuild
+
+javascript:
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-51595485-1', 'hakomo.github.io');
+    ga('send', 'pageview');
+
+    $(function() {
+        $('.twitter').socialbutton('twitter', {
+            button: 'horizontal',
+            text: document.title,
+            url: 'http://hakomo.github.io/invisible/'
+        });
+        $('.facebook').socialbutton('facebook_like', {
+            button: 'button_count',
+            url: 'http://hakomo.github.io/invisible/'
+        });
+    });
